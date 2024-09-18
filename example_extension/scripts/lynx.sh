@@ -1,16 +1,15 @@
 # Lynx
-patch -Np1 -i ../$(basename $PATCH_LYNX)
 
-./configure --prefix=/usr          \
-            --sysconfdir=/etc/lynx \
-            --datadir=/usr/share/doc/lynx-2.8.9rel.1 \
-            --with-zlib            \
-            --with-bzlib           \
-            --with-ssl             \
-            --with-screen=ncursesw \
-            --enable-locale-charset
+./configure --prefix=/usr           \
+            --sysconfdir=/etc/lynx  \
+            --with-zlib             \
+            --with-bzlib            \
+            --with-ssl              \
+            --with-screen=ncursesw  \
+            --enable-locale-charset \
+            --datadir=/usr/share/doc/lynx-2.9.2
 make
 
 make install-full
-chgrp -v -R root /usr/share/doc/lynx-2.8.9rel.1/lynx_doc
+chgrp -v -R root /usr/share/doc/lynx-2.9.2/lynx_doc
 
