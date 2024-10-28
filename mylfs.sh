@@ -839,7 +839,7 @@ function main {
     # unmount and detatch image
     unmount_image
 
-    echo "build successful."
+    echo "Build successful!"
 }
 
 
