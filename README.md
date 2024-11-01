@@ -4,9 +4,11 @@ It's a giant bash script that builds Linux From Scratch.
 Pronounce it in whatever way seems best to you.
 
 If you don't know what this is, or haven't built Linux From Scratch on your own before, you should go through the LFS [book](https://linuxfromscratch.org) before using this script.
+# Completed!
+
+* Add support for the lfs 12.2 book
 
 # Roadmap
-* Add support for the lfs 12.2 book (In progress)
 * Clean up the source code and ask user for the systemd or sysvinit book before installation (not started yet)
 * Create a python script which asks user for http/https Linux from scratch book , extracts commands and self sustains bash scripts, build orders, packages, patches and static files. (Started but development is stale, dont expect an ETA)
 
@@ -100,6 +102,12 @@ on the device you specify.
 
         -n|--install            Specify the path to a block device on which to install the
                                 fully built img file.
+
+        --chroot                Enters the chroot environment within the LFS build.
+                                This enables you to run build steps within a chrooted 
+                                environment, providing an independant setup for your 
+                                LFS build process. It configures necessary environment variables, 
+                                enters the chroot and configures the shell prompt.            
 
         -c|--clean              This will unmount and delete the image, and clear the
                                 logs.
